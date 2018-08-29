@@ -1,7 +1,9 @@
 {
-  "name": "@ibm-watson/assistant-simple",
-  "description": "A simple Node.js based web app which shows how to use the Watson Assistant API to recognize user intents.",
-  "version": "0.1.1",
+  "name": "MountainGuide-Demo-Chatbot",
+  "original author": "@ibm-watson",
+  "contributing author": "David Nowak",
+  "description": "A simple demo chatbot built upon the Watson Assistant API.",
+  "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

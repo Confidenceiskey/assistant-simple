@@ -34,13 +34,9 @@ var PayloadPanel = (function() {
   // full width (regardless of screen size)
   function togglePanel(event, element) {
     var payloadColumn = document.querySelector(settings.selectors.payloadColumn);
-    if (element.classList.contains('full')) {
-      element.classList.remove('full');
-      payloadColumn.classList.remove('full');
-    } else {
-      element.classList.add('full');
-      payloadColumn.classList.add('full');
-    }
+
+    $(".chat-column").show();
+    $("#view-change-button").hide();
   }
 
   // Set up callbacks on payload setters in Api module

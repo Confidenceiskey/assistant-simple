@@ -15,41 +15,342 @@ div {
   line-height: 1.25rem;
 }
 
-.disclaimer {
-  font-size: 0.75rem;
-  padding: 0.5rem;
+/* HEADER */
+/* HEADER */
+
+#navbar-header {
+  margin: 0px;
 }
+
+/* Targets the entire naviation bar background at the top */
+#header-nav {
+  background-color: #0A173D;
+  border-radius: 0;
+  border: 0;
+  padding: 0px;
+}
+
+/*** TARGETING THE BRAND/LOGO ***/
+.navbar-brand {
+  padding: 6px 0 6px 30px;
+  margin-right: 15px;
+}
+.navbar-brand a:hover {
+  text-decoration: none;
+}
+/* Adjust brand name for different screen sizes */
+.navbar-brand h1 {
+  font-family: Arial;
+  color: #fff;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* Decrease the brand name font size & padding for sm screens */
+@media (max-width: 349px) {
+  .navbar-brand h1 {
+    font-size: 1.5em;
+    padding-top: 8px;
+  }
+  .navbar-brand {
+    padding-left: 15px;
+  }
+}
+/*** END OF TARGETING THE BRAND/LOGO ***/
+
+
+/*** TARGETING THE SQUARE NAV MENU ***/
+/* Targets the Square nav menu in sm screens */
+body .navbar-toggler:hover {
+  background-color: #fff;
+}
+/* Gets rid of blue shadow around nav square menu upon click on sm screens */
+#navbar-header .navbar-toggler:focus {
+  outline: none;
+}
+body .navbar-toggler:hover .icon-bar {
+	background-color: #0A173D;
+}
+
+/* Targets single horizontal bar in Menu box */ 
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+}
+/* Targets spacing between bars */
+.navbar-toggler .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+/* Targets border around the three lines in nav */
+#navbar-header button.navbar-toggler {
+  padding: 10px 9px 10px 9px;
+  border: 2px solid #fff;
+  margin: 0 15px 0 0;
+}
+/*** END OF TARGETING THE SQUARE NAV MENU ***/
+
+
+/*** TARGETING THE NAVIGATION MENU EXPANDED ON SM SCREENS AND BUTTONS AT TOP IN LG SCREENS***/
+/* Area surrounding the nav buttons (dropdown menu on sm screens & horizontal menu on lg devices) */
+#collapsable-nav {
+  margin: 0px;
+}
+/* Fixed location on lg screens (align right) */
+@media (min-width:768px){
+  #collapsable-nav {
+    position: absolute;
+    top: -7px;
+    right: 25px;
+  }
+}
+
+/* Adjust the text in the Dropdown menu and nav menu */
+#nav-list a {
+  text-align: center;
+  color: #0A173D;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+
+/* Only XS screen: Modifies the above so baby blue shows up for dropdown box & on hover navy. */
+ @media (max-width:767px){
+  #collapsable-nav {
+    background: #5ADEED;
+  }
+  /*   navy on hover in dropdown menu */
+  #nav-list a:hover, #nav-list a:focus, #nav-list a:active {
+  background: #0A173D;
+  color: #5ADEED;
+  } 
+  /* Changes the gap in dropdown menu */
+  #nav-list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  } 
+}
+
+/* Similar to previous, but for lg screens */
+@media (min-width: 768px) {
+   /*  Changes the menu to dark grey on hover */
+  #nav-list a:hover {
+    background: #fff;
+    color: #0A173D;
+  }
+  /*  Increases margin from top  */
+  #nav-list {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  }
+  /*  Increase padding between navigation menu buttons  */
+  #nav-list a.nav-link {
+    padding: 15px 15px 10px 15px;
+  }
+  /* Changes nav color for larger screen sizes */
+  #nav-list a {
+  	color: #fff;
+  }
+}
+
+/*** END OF TARGETING THE NAVIGATION MENU EXPANDED ON SMALL SCREENS AND BUTTONS AT TOP IN LARGE SCREENS***/
+
+
+/*END OF HEADER*/
+/*END OF HEADER*/
+
+
+/* JUMBOTRON SECTION */
+/* JUMBOTRON SECTION */
+
+/*** TARGETING JUMBOTRON BACKGROUND ***/
+/* General settings for jumbotron background */
+
+.jumbotron {
+    margin: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    height: 550px;
+    background: url("../img/mountain2.jpg") no-repeat center;
+    background-size: 100% auto;
+  }
+
+/*** END OF TARGETING JUMBOTRON BACKGROUND ***/
+
+/*** START OF TARGETING MAIN CONTENT (TEXT & BUTTON)  ***/
+/* Targeting the "Business" title in the jumbotron section */
+#jumbo2 h1#headliner {
+  margin: 220px 0 25px 80px;
+  padding: 10px;
+  color: #fff; 
+  background-color: rgb(132, 184, 51, 0.55);  /* lighter green */
+  border-radius: 3px;
+  font-size: 2.8em;
+  text-align: center;
+}
+@media (min-width: 600px) and (max-width: 849px) {
+  .jumbotron {
+    height: 400px;
+  }
+  #jumbo2 h1#headliner {
+    margin-top: 170px;
+    font-size: 2.4em;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .jumbotron {
+    height: 340px;
+    background-size: cover;
+  }
+  #jumbo2 h1#headliner {
+    margin-top: 135px;
+    margin-left: 0px;
+    font-size: 2em;
+  }
+}
+/* Centers H1 text */
+.headline-container {
+  margin: 0px auto;
+}
+
+/* END OF JUMBOTRON SECTION */
+/* END OF JUMBOTRON SECTION */
+
+
+/* START OF PROJECTS SECTION */
+/* START OF PROJECTS SECTION */
+
+/* Entire background for the Projects section */
+#projects-box {
+  margin: 0px;
+  padding: 110px 5% 10px 5%;
+  background: #e2dede;
+  background: #fff;
+}
+
+/*
+  background: #5ADEED;  BABY BLUE OPTION
+  background: #0A173D;  NAVY BLUE OPTION
+  background: #84B833;  LIGHTER GREEN OPTION
+  background: #439923;  DARKER GREEN OPTION 
+  background: #fff;     WHITE OPTION
+*/
+
+#projects-box .heading {
+  padding-bottom: 40px;
+  margin: 0px;
+  color: #439923; /* darker green */
+}
+
+#projects-box .container {
+  padding-bottom: 30px;
+}
+
+/*Targets card titles*/
+#projects-box .card-title {
+  background: #0A173D; /* navy */
+  color: #fff;
+  margin: 0px;
+  border-radius: 0 0 3px 3px;
+}
+
+#projects-box .card-title h2 {
+  margin: 0px;
+}
+
+/* Target image size */
+#projects-box .card img {
+  height: 350px;
+  object-fit: cover;
+}
+
+#projects-box .card :hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* Targets the bottom 3 boxes*/
+@media (min-width: 1101px) and (max-width: 1200px) {
+  #projects-box #box3 img, #projects-box #box4 img, #projects-box  #box5 img {
+    height: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  #projects-box .card img {
+    height: 275px;
+  }
+}
+/* Targets the bottom 3 boxes*/
+@media (min-width: 768px) and (max-width: 950px) {
+  #projects-box #box3 img, #projects-box #box4 img, #projects-box  #box5 img {
+    height: 215px;
+  }
+}
+
+/* END OF PROJECTS SECTION */
+/* END OF PROJECTS SECTION */
+
+
+/* START OF FOOTER SECTION */
+/* START OF FOOTER SECTION */
+
+.panel-footer-fixed {
+  background: #fff;     /*WHITE OPTION*/
+  color: #439923;  /*DARKER GREEN OPTION*/ 
+}
+
+#copy {
+  padding: 0px 10px 5px 10px;
+}
+
+@media (max-width: 415px) {
+  #copy {
+    padding-bottom: 90px;
+  }
+}
+
+#cta {
+  color: #0A173D; /* navy */
+  background-color: yellow;
+}
+
+/* END OF FOOTER SECTION */
+/* END OF FOOTER SECTION */
+
+
+/* START OF CHAT WINDOW SECTION */
+/* START OF CHAT WINDOW SECTION */
 
 #view-change-button {
   display: inline-block;
-  position: absolute;
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 1.5625rem;
-  background: #AB72F8;
-  top: 0.3125rem;
-  right: 0.3125rem;
+  position: fixed;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: red;
+  background: blue;
+  bottom: 56px;
+  right: 56px;
   line-height: 3.125rem;
   vertical-align: middle;
+  z-index: 1;
 }
 
 #view-change-button img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+  /*Calc req'd: 74px - 50px /2 = 12px/75 = 15% */
+  margin-top: 16%;
 }
 
-#view-change-button:not(.full) .not-full {
-  display: inline-block;
-}
-
-#view-change-button.full .full {
-  display: inline-block;
+#view-change-button .full {
+  display: block;
 }
 
 #contentParent {
   height: 100%;
+  background-color: lightblue;
 }
 
 .responsive-columns-wrapper {
@@ -73,20 +374,58 @@ div {
 }
 
 .chat-column {
-  height: 90%;
-  padding: 0.9375rem 0 0.625rem 0;
+  position: fixed;
+  display: none;
+  bottom: 30px;
+  right: 30px;
+  height: 400px;
+  padding: 0 0 10px 0;
   margin: auto;
   text-align: left;
-  max-width: 25rem;
-  min-width: 9.375rem;
+  width: 320px;
+  background-color: #fff;
+  border: 1px blue solid;
 }
 
 #scrollingChat {
   margin: 0.75rem;
   overflow-y: auto;
   overflow-x: hidden;
-  height: calc(100% - 4rem);
+  height: calc(100% - 114px);
 }
+
+/* Start of chat window header */
+#chat-header {
+  height: 50px;
+  background: red;
+  background: blue;
+}
+
+#chat-header h5 {
+  color: #fff;
+  padding: 12px 0 0 15px;
+}
+
+#minimize-bar {
+  width: 32px;
+  height: 24px;
+  padding: 10px 5px;
+  cursor: pointer;
+  background: #d2cdcd;
+  background: #fff;
+  background-clip: content-box;
+  position: absolute;
+  top: 12.5px;
+  right: 10px;
+}
+
+#minimize-bar:hover {
+  background: #fff;
+  background: #0A173D;
+  background-clip: content-box;
+}
+
+/* End of chat window header */
 
 .message-inner {
   opacity: 0;
@@ -259,10 +598,7 @@ input:-moz-placeholder {
   background-color: #23292A;
   color: #fff;
   overflow-x: auto;
-
-  width: 45%;
-  max-width: 32.0625rem;
-  min-width: 29.6875rem;
+  display: none;
 }
 
 #payload-column.full {
@@ -327,15 +663,60 @@ html{
     font-size: 14px;
   }
 
-  .chat-column {
-    padding-top: 4rem;
-  }
-
   #payload-column {
     width: 0;
     max-width: none;
     min-width: initial;
   }
+}
+
+/* Reduce chat window height on mobile phones for larger screen sizes*/
+/*Or when most phones are in portrait mode*/
+@media (max-width: 415px), (max-height: 415px) {
+  .chat-column {
+    width: 100%;
+    height: 82%;
+    position: fixed;
+    top: 0px;
+    bottom: unset;
+    right: unset;
+    border: unset;
+    border-bottom: 1px blue solid;
+  }
+  #view-change-button {
+    width: 55px;
+    height: 55px;
+    bottom: 22px;
+    right: 22px;
+  }
+  #view-change-button img {
+  width: 70%;
+  height: 70%;
+  /*Calc req'd: 55px - (50*0.7) /2 = 10px/55 = 15% */
+  margin-top: 15%;
+}
+}
+
+/*For most normal sized phones, makes chat window full screen*/
+@media (max-height: 675px) and (max-width: 415px) {
+  .chat-column {
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border: unset;
+  }
+  #view-change-button {
+    width: 50px;
+    height: 50px;
+    bottom: 24px;
+    right: 24px;
+  }
+  #view-change-button img {
+  width: 70%;
+  height: 70%;
+  /*Calc req'd: 55px- (50*0.7) /2 = 7.5px/50 = 15% */
+  margin-top: 15%;
+}
 }
 
 /* IBM Design fonts https://github.ibm.com/Design/fonts */

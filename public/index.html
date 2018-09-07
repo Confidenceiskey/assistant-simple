@@ -1,54 +1,196 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <base href="/">
-  <title>Watson Assistant Chat App</title>
+  <title>MountainGuide Chatbot Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta property="og:image" content="conversation.svg" />
-  <meta property="og:title" content="Conversation Chat Simple" />
-  <meta property="og:description" content="Sample application that shows how to use the Watson Assistant API to identify user intents"
-  />
+  <meta charset="utf-8">
+
+  <!-- TO FILL OUT META DATA LATER -->
+  <meta property="og:image" content="conversation.svg">
+  <meta property="og:title" content="Conversation Chat Simple">
+  <meta property="og:description" content="A fictitious Mountain Guiding website that demostrates the power of using chatbot technology">
   <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/app.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app-min.css">
 </head>
 
 <body>
+	<header>
+    <nav id="header-nav" class="navbar navbar-expand-md">
+      <div class ="container-fluid" id="navbar-header"> 
+
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <a href="http://davidnowak-demo-chatbot.mybluemix.net"><h1>MountainGuides</h1></a>
+        </div> <!-- End of .navbar-brand class (Brand) -->
+        
+          <!-- Toggle -->
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+         <!--Nav bar used for toggling -->
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="navbar-nav">
+            <li class="nav-item">
+              <a class= "nav-link" href="#services">Services</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#rental">Rentals</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+          </ul> <!-- End of #nav-list & .navbar-nav -->
+        </div> <!-- end of navbar collapse -->
+        
+      </div> <!-- end of .container-fluid class & #navbar-header -->
+    </nav> <!-- end of #header-nav -->
+  </header>
+<!--  END OF HEADER SECTION  -->
+
+<!--  START OF JUMBOTRON SECTION  --> 
+  <div class="jumbotron row" id="jumbo2">
+    <div class="headline-container">
+      <h1 id="headliner">Your Next Adventure Is Here</h1>
+    </div>
+  </div>
+<!--  END OF JUMBOTRON SECTION  --> 
+
+
+<!--   START OF PROJECTS CONTENT -->
+  <div class="row" id="projects-box">
+  	<div class="container-fluid">
+      <h2 class="heading text-center">Find Your Activity</h1>
+    </div>
+    
+    <!--   START OF BOX 1 content   -->
+    <div class="container col-sm-12 col-md-6">
+      <section class="project-content">
+        <div class="card" id="box1">
+          <img class="card-img-top" src="img/skiing.jpg" alt="Picture of someone skiing">
+          <div class="card-title">
+            <h2 class="text-center">SKIING</h2>
+          </div>
+        </div> <!-- end of .card class (#box1) content -->
+      </section> <!-- end of section .project-content class content -->
+    </div> <!-- end of container class (#box1) content -->
+
+    <!--   START OF BOX 2 content   -->
+    <div class="container col-sm-12 col-md-6">
+      <section class="project-content">
+        <div class="card" id="box2">
+          <img class="card-img-top" src="img/rock-climbing.jpg" alt="Picture of someone rock climbing">
+          <div class="card-title">
+            <h2 class="text-center">ROCK CLIMBING</h2>
+          </div>
+        </div> <!-- end of .card class (#box2) content -->
+      </section> <!-- end of section .project-content class content -->
+    </div> <!-- end of container class (#box2) content -->
+
+    <!--   START OF BOX 3 content   -->
+    <div class="container col-sm-12 col-md-4">
+      <section class="project-content">
+        <div class="card" id="box3">
+          <img class="card-img-top" src="img/ice-climbing.jpg" alt="Picture of someone ice climbing">
+          <div class="card-title">
+            <h2 class="text-center">ICE CLIMBING</h2>
+          </div>
+        </div> <!-- end of .card class (#box3) content -->
+      </section> <!-- end of section .project-content class content -->
+    </div> <!-- end of container class (#box3) content -->
+
+    <!--   START OF BOX 4 content   -->
+    <div class="container col-sm-12 col-md-4">
+      <section class="project-content">
+        <div class="card" id="box4">
+          <img class="card-img-top" src="img/alpine-climbing.jpg" alt="Picture of someone alpine climbing">
+          <div class="card-title">
+            <h2 class="text-center">ALPINE CLIMBING</h2>
+          </div>
+        </div> <!-- end of .card class (#box4) content -->
+      </section> <!-- end of section .project-content class content -->
+    </div> <!-- end of container class (#box4) content -->
+
+    <!--   START OF BOX 5 content   -->
+    <div class="container col-sm-12 col-md-4">
+      <section class="project-content">
+        <div class="card" id="box5">
+          <img class="card-img-top" src="img/hiking.jpg" alt="Picture of someone hiking">
+          <div class="card-title">
+            <h2 class="text-center">HIKING</h2>
+          </div>
+        </div> <!-- end of .card class (#box5) content -->  
+      </section> <!-- end of section .project-content class content -->
+    </div> <!-- end of container class (#box5) content -->
+
+  </div> <!-- End of projects-box content -->
+<!--   END OF PROJECTS CONTENT -->
+
+
   <div id="view-change-button" class="button" onclick="PayloadPanel.togglePanel(event, this)">
     <img class="option full" src="../img/Chat Button.png">
-    <img class="option not-full" src="../img/Code Button.png">
   </div>
-  <div id="contentParent" class="responsive-columns-wrapper">
 
+  <div id="contentParent" class="responsive-columns-wrapper">
     <div id="chat-column-holder" class="responsive-column content-column">
       <div class="chat-column">
+        <div id="chat-header">
+        	<h5>MountainGuides Chat</h5>
+        	<div id="minimize-bar">
+        	</div>
+        </div>
         <div id="scrollingChat"></div>
         <label for="textInput" class="inputOutline">
           <input id="textInput" class="input responsive-column" placeholder="Type something" type="text" onkeydown="ConversationPanel.inputKeyDown(event, this)" autofocus>
         </label>
         <div class="disclaimer">
-          * This system is for demonstration purposes only and is not intended to process Personal Data. No Personal Data is to be entered
-          into this system as it may not have the necessary controls in place to meet the requirements of the General Data Protection
-          Regulation (EU) 2016/679.
         </div>
       </div>
     </div>
     <div id="payload-column" class="fixed-column content-column">
       <div id="payload-initial-message">
-        Type something to see the output
+        See output
       </div>
       <div id="payload-request" class="payload"></div>
       <div id="payload-response" class="payload"></div>
     </div>
   </div>
 
+<!--  START OF FOOTER CONTENT  -->
+  <footer class="panel-footer-fixed">
+    <div class="container">
+      <hr class="my-4">
+      <div class="text-center" id="copy">
+      	<p>&copy; 2018. MountainGuides. All rights reserved.</p>
+      	<p id="cta"><strong>Please note that this is a fictitious website with NO working links! It was made to demonstrate how a custom built chatbot could partially handle your customer service inquiries for your mountain guiding business. Note that both the website and chatbot were designed and developed by David Nowak.</strong></p>
+      </div>
+    </div> <!-- End of .container class -->
+  </footer> <!-- End of footer (.panel-footer-fixed) -->
+<!--  END OF FOOTER CONTENT  -->
 
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
   <script src="js/conversation.js"></script>
   <script src="js/payload.js"></script>
   <script src="js/global.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
+  <script src="js/chatbox.js"></script>
 </body>
 
 </html>

@@ -47,7 +47,7 @@ div {
   margin-bottom: 0;
 }
 /* Decrease the brand name font size & padding for sm screens */
-@media (max-width: 349px) {
+@media (max-width: 360px) {
   .navbar-brand h1 {
     font-size: 1.5em;
     padding-top: 8px;

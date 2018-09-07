@@ -411,17 +411,17 @@ body .navbar-toggler:hover .icon-bar {
   height: 24px;
   padding: 10px 5px;
   cursor: pointer;
-  background: #d2cdcd;
   background: #fff;
-  background-clip: content-box;
   position: absolute;
   top: 12.5px;
   right: 10px;
 }
 
 #minimize-bar:hover {
-  background: #fff;
   background: #0A173D;
+}
+
+#minimize-bar, #minimize-bar:hover {
   background-clip: content-box;
 }
 

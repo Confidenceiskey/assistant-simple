@@ -17,6 +17,7 @@
 'use strict';
 
 var express = require('express'); // app server
+var compression = require('compression');
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
 
@@ -25,6 +26,8 @@ var app = express();
 // Bootstrap application settings
 app.use(express.static('./public')); // load UI from public folder
 app.use(bodyParser.json());
+
+app.use(compression());
 
 // Create the service wrapper
 

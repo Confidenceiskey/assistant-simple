@@ -22,12 +22,11 @@ var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
 
 var app = express();
+app.use(compression());
 
 // Bootstrap application settings
 app.use(express.static('./public')); // load UI from public folder
 app.use(bodyParser.json());
-
-app.use(compression());
 
 // Create the service wrapper
 
@@ -94,6 +93,7 @@ function updateMessage(input, response) {
   } else {
     return response;
   }
+
   if (response.intents && response.intents[0]) {
     var intent = response.intents[0];
     // Depending on the confidence of the response the app can return different messages.
